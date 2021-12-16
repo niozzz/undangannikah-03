@@ -1,14 +1,7 @@
 
 <?php
 
-if (!isset($_SESSION))
-{
-	session_start();
 
-	
-}
-
-$_SESSION['statusTamu'] = "true";
 
 if (isset($_GET['untuk']))
 {
@@ -123,20 +116,20 @@ if (isset($_GET['untuk']))
 
 					<div class="contact-form margin-bottom">
 
-						<h2 class="center-text" style="margin-bottom:20px;">Dzulqa <br> <i style="color:#E45F74;" class="icon icon-heart"></i> <br> Andi</h2>
-						<?php if (isset($_GET['untuk'])) {?>
+						<h1 class="center-text" style="margin-bottom:20px;">Dzulqa <br> <i style="color:#E45F74;" class="icon icon-heart"></i> <br> Andi</h1>
+						<?php if (isset($_GET['untuk']) && $_GET['untuk'] != '') {?>
 						<p class="center-text">
 							Turut mengundang Bapak/Ibu/Saudara/i
 							<br>
-							<span style="margin:10px 0px;font-size: 2rem;font-weight:bold;"><?= ucwords( $namaTamu) ?></span>
+							<span style="margin:10px 0px;font-size: 1.3rem;font-weight:bold;"><?= ucwords( $namaTamu) ?></span>
 							
 						</p>
 						<?php } ?>
-						<form method="post" action="index.php">
+						<form method="post" action="init-session.php">
 
 							<div class="row">
 
-								<form method="POST" action="index.php">
+								<form method="POST" action="init-session.php">
 									<!-- <input type="hidden" name="statusTamu" value="true"> -->
 									<div class="col-sm-12 center-text">
 
