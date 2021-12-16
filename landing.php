@@ -1,3 +1,21 @@
+
+<?php
+
+if (!isset($_SESSION))
+{
+	session_start();
+
+	
+}
+
+$_SESSION['statusTamu'] = "true";
+
+if (isset($_GET['untuk']))
+{
+	$namaTamu = htmlspecialchars ($_GET['untuk']);
+}
+?>
+
 <!DOCTYPE HTML>
 
 <html lang="en">
@@ -106,13 +124,20 @@
 					<div class="contact-form margin-bottom">
 
 						<h2 class="center-text" style="margin-bottom:20px;">Dzulqa <br> <i style="color:#E45F74;" class="icon icon-heart"></i> <br> Andi</h2>
-
+						<?php if (isset($_GET['untuk'])) {?>
+						<p class="center-text">
+							Turut mengundang Bapak/Ibu/Saudara/i
+							<br>
+							<span style="margin:10px 0px;font-size: 2rem;font-weight:bold;"><?= ucwords( $namaTamu) ?></span>
+							
+						</p>
+						<?php } ?>
 						<form method="post" action="index.php">
 
 							<div class="row">
 
 								<form method="POST" action="index.php">
-
+									<!-- <input type="hidden" name="statusTamu" value="true"> -->
 									<div class="col-sm-12 center-text">
 
 										<button class="btn"><b>Buka Undangan</b></button>

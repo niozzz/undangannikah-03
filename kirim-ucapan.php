@@ -1,5 +1,12 @@
 <?php
+if (!isset($_SESSION))
+{
+	session_start();
 
+	
+}
+
+$_SESSION['statusTamu'] = "true";
 require "config.php";
 
 if (isset($_POST['tombolKirim']))
@@ -7,6 +14,8 @@ if (isset($_POST['tombolKirim']))
     $nama_tamu = htmlspecialchars($_POST['namaTamu']);
     $pesan_tamu = htmlspecialchars($_POST['ucapanTamu']);
     $result = mysqli_query($conn, "INSERT INTO buku_tamu VALUES (NULL, '$nama_tamu', '$pesan_tamu')");
+    
+    
 
     if ($result)
     {

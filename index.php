@@ -1,10 +1,36 @@
 <?php
-
+if (!isset($_SESSION))
+{
+	session_start();	
+}
+// var_dump($_SESSION);
 require "config.php";
 
 $dataBT = query("SELECT * FROM buku_tamu");
 // var_dump($dataBT);
 // die;
+
+if (isset($_GET['untuk']))
+{
+  $namaTamu = htmlspecialchars ($_GET['untuk']);
+  echo "
+        <script>
+        document.location.href='landing.php?untuk=$namaTamu';
+        </script>
+        ";
+}
+
+if (!isset($_SESSION['statusTamu']) == "true")
+{
+  
+    echo "
+        <script>
+        document.location.href='landing.php';
+        </script>
+        ";
+}
+
+session_unset();
 
 ?>
 
@@ -233,35 +259,34 @@ $dataBT = query("SELECT * FROM buku_tamu");
         .grid {
   display: grid;
   grid-template-rows: 
-    repeat(4, 180px);
+    repeat(3, 180px);
   grid-template-columns: 
-    repeat(3, 1fr);
+    repeat(2, 1fr);
   grid-gap: 5px;
 }
 
 .item:nth-child(1) {
-  grid-row: 1 / 5;
-}
-
-.item:nth-child(5) {
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
-}
-
-.item:nth-child(3) {
-  grid-column: 2 / 3;
-  grid-row: 2 / 4;
-}
-
-.item:nth-child(4) {
-  grid-column: 3 / 3;
-  grid-row: 1 / 5;
+  grid-row: 1 / 3;
+  grid-column: 1 / 2;
 }
 
 .item:nth-child(2) {
-  grid-column: 2 / 3;
-  grid-row: 4 / 5;
+  grid-row: 1 / 3;
+  grid-column: 2 / 2;
 }
+
+
+.item:nth-child(3) {
+  grid-row: 3 / 4;
+  grid-column: 1 / 2;
+}
+
+.item:nth-child(4) {
+  grid-row: 3 / 4;
+  grid-column: 2 / 2;
+}
+
+
 
 /* .item:nth-child(5) {
   grid-column: 1 / 3;
@@ -297,7 +322,7 @@ $dataBT = query("SELECT * FROM buku_tamu");
   .grid {
   display: grid;
   grid-template-rows: 
-    repeat(5, 180px);
+    repeat(4, 180px);
   grid-template-columns: 
     repeat(1, 1fr);
   grid-gap: 5px;
@@ -313,17 +338,13 @@ $dataBT = query("SELECT * FROM buku_tamu");
 }
 .item:nth-child(3) {
   grid-column: 1 / 1;
-  grid-row: 4 / 4;
+  grid-row: 3 / 3;
 }
 .item:nth-child(4) {
   grid-column: 1 / 1;
-  grid-row: 5 / 5;
+  grid-row: 4 / 4;
 }
 
-.item:nth-child(5) {
-  grid-column: 1 / 1;
-  grid-row: 3 / 3;
-}
 }
 
 
@@ -342,34 +363,33 @@ $dataBT = query("SELECT * FROM buku_tamu");
   .grid {
   display: grid;
   grid-template-rows: 
-    repeat(4, 180px);
+    repeat(3, 180px);
   grid-template-columns: 
-    repeat(3, 1fr);
+    repeat(2, 1fr);
   grid-gap: 5px;
 }
 
 .item:nth-child(1) {
-  grid-row: 2 / 4;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
 }
 
-.item:nth-child(5) {
-  grid-column: 1 / 3;
-  grid-row: 1 / 1;
+.item:nth-child(2) {
+  grid-row: 1 / 2;
+  grid-column: 2 / 2;
 }
+
 
 .item:nth-child(3) {
-  grid-column: 2 / 3;
-  grid-row: 2 / 4;
+  grid-row: 2 / 2;
+  grid-column: 1 / 2;
 }
 
 .item:nth-child(4) {
-  grid-column: 3 / 3;
-  grid-row: 1 / 5;
+  grid-row: 2 / 2;
+  grid-column: 2 / 2;
 }
-.item:nth-child(2) {
-  grid-column: 1 / 3;
-  grid-row: 4 / 4;
-}
+
 }
 
 /* overlay */
@@ -441,7 +461,7 @@ $dataBT = query("SELECT * FROM buku_tamu");
 <section class="hero hero-slider-wrapper hero-style-1">
 <div class="hero-slider">
 <div class="slide">
-<img src="images/sampul-baru.jpg" class="slider-bg">
+<img src="images/slider1.jpg" class="slider-bg">
 </div>
 </div>
 <div class="hero-circle wow fadeIn" data-wow-duration="0.2s" id="hero-circle">
@@ -451,9 +471,9 @@ $dataBT = query("SELECT * FROM buku_tamu");
 Undangan Pernikahan
 </h4>
 <h2 class="wow fadeIn heading-font-couple mx-5" data-wow-delay="0.2s">Fitri &amp; Budi</h2>
-<p class="wow fadeIn" data-wow-delay="0.2s">12 Desember 2021</p>
-<p class="wow fadeIn" data-wow-delay="0.2s">09:00
-- 14:30 WIB</p>
+<p class="wow fadeIn" data-wow-delay="0.2s">09 Januari 2022</p>
+<p class="wow fadeIn" data-wow-delay="0.2s">08:00 WIB
+- Selesai</p>
 </div>
 </div>
 </div>
@@ -463,13 +483,7 @@ Undangan Pernikahan
 
 <section class="couple-section section-padding flower" id="couple">
 
-<div class="row">
-<div class="col d-flex justify-content-center p-2 mx-4" data-aos="fade-up" data-aos-duration="2000">
-<div class="text-center mt-3">
-<p><span style="text-align: center; color: black;" class="font-responsif">Assalamualaikum Wr. Wb. <br> Dengan menyebut nama Allah SWT yang Maha Pengasih dan Maha Penyayang, kami mengundang untuk menghadiri pernikahan kami</span><br></p>
-</div>
-</div>
-</div>
+
 
 <div class="container" data-aos="fade-up" data-aos-duration="2000">
 <div class="row">
@@ -483,31 +497,31 @@ Undangan Pernikahan
 <div class="col col-lg-10 col-lg-offset-1">
 <div class="couple">
 <div class="groom" data-aos="fade-right" data-aos-duration="2000">
-<div class="round-avatar img-holder" style="background-image: url('images/Fitri.jpg')"></div>
+<div class="round-avatar img-holder" style="background-image: url('images/fitri.jpg')"></div>
 
 <div class="mt-5" data-aos="fade-right" data-aos-duration="2000">
 <h2 class="couple-name">
 <strong>
-Fitri Kamila Mandalika
+Fitriyani, S.Pd
 </strong>
 </h2>
-<p>Anak ketiga dari Bpk. Abdul Wahab & Ibu Risma Nelly Nasution</p>
+<p>Putri Kel, Bpk. Muhammad Tohir & Ibu Nur Asiah</p>
 
 </div>
 </div>
 <div class="details">
 </div>
 <div class="bride" data-aos="fade-left" data-aos-duration="2000">
-<div class="round-avatar img-holder" style="background-image: url('images/Budi.jpg')">
+<div class="round-avatar img-holder" style="background-image: url('images/budi.jpg')">
 </div>
 
 <div class="mt-5" data-aos="fade-left" data-aos-duration="2000">
 <h2 class="couple-name">
 <strong>
-Budi Saputra
+Budiman Haryanto, S.Pd
 </strong>
 </h2>
-<p>Anak keempat dari Bpk. Ilyas M & Ibu Ai Munawaroh</p>
+<p>Putra Kel, Bpk. Dirsan & Ibu Tugimah</p>
 
 </div>
 </div>
@@ -555,7 +569,7 @@ Budi Saputra
             <!-- prokes start -->
           <div class="groom mt-3" data-aos="fade-right" data-aos-duration="2000">
             <div>
-              <img src="images/prokes1.png" width="50%" alt="">
+              <img src="images/prokes-1.png" width="50%" alt="">
             </div>
             <div class="mt-2" data-aos="fade-right" data-aos-duration="2000">
               <p style="font-family:Josefin Sans; font-size:20px;">
@@ -567,7 +581,7 @@ Budi Saputra
           <div class="details"></div>
           <div class="bride mt-3" data-aos="fade-left" data-aos-duration="2000">
             <div>
-              <img src="images/prokes2.png" width="50%" alt="">
+              <img src="images/prokes-2.png" width="50%" alt="">
             </div>
             <div class="mt-2" data-aos="fade-left" data-aos-duration="2000">
               <p style="font-family:Josefin Sans; font-size:20px;">
@@ -589,7 +603,7 @@ Budi Saputra
             <!-- prokes start -->
           <div class="groom mt-3" data-aos="fade-right" data-aos-duration="2000">
             <div>
-              <img src="images/prokes3.png" width="50%" alt="">
+              <img src="images/prokes-3.png" width="50%" alt="">
             </div>
             <div class="mt-2" data-aos="fade-right" data-aos-duration="2000">
               <p style="font-family:Josefin Sans; font-size:20px;">
@@ -601,7 +615,7 @@ Budi Saputra
           <div class="details"></div>
           <div class="bride mt-3" data-aos="fade-left" data-aos-duration="2000">
             <div>
-              <img src="images/prokes4.png" width="50%" alt="">
+              <img src="images/prokes-4.png" width="50%" alt="">
             </div>
             <div class="mt-2" data-aos="fade-left" data-aos-duration="2000">
               <p style="font-family:Josefin Sans; font-size:20px;">
@@ -661,7 +675,7 @@ Budi Saputra
   <p class="font-location mt-2">
   <h5>
   <strong>
-  12 Desember 2021
+  09 Januari 2022
   </strong>
   </h5>
 
@@ -678,14 +692,14 @@ Budi Saputra
     Acara Akad
     </strong>
     </h5>
-    09.00 - 10.00 WIB
+    08.00 WIB - Selesai
     <br><br>
     <h5>
     <strong>
-    Masjid Jami Nurul Huda Kelapa Dua
+    Dusun Pabuaran Desa Sirnajaya
     </strong>
     </h5>
-    Jl. Bidar 2, No. 11 RT/RW 004/008, Kelapa Dua Kabupaten Tangerang, Banten
+    RT 04/02 Kec. Rajadesa Ciamis - Jawa Barat
 
     </p>
   </div>
@@ -699,14 +713,14 @@ Budi Saputra
     Acara Resepsi
     </strong>
     </h5>
-    10.00 - 14.30 WIB
+    10.00 WIB - Selesai
     <br><br>
     <h5>
     <strong>
-    Kediaman Mempelai Wanita
+    Dusun Pabuaran Desa Sirnajaya
     </strong>
     </h5>
-    Jl. Bidar 2, No. 11 RT/RW 004/008, Kelapa Dua Kabupaten Tangerang, Banten
+    RT 04/02 Kec. Rajadesa Ciamis - Jawa Barat
 
     </p>
   </div>
@@ -768,12 +782,12 @@ Budi Saputra
 <h2 class="heading-font-type">Galeri</h2>
 </div>
 <div class="grid">
-  <div class="item" data-aos="zoom-in" data-aos-duration="2000" style="background-image: url(images/galeri1.jpg)"></div>
+  <div class="item" data-aos="zoom-in" data-aos-duration="2000" style="background-image: url(images/galeri1.jpeg)"></div>
   
-  <div class="item" data-aos="zoom-in" data-aos-duration="2000" style="background-image: url(images/galeri2.jpg)"></div>
-  <div class="item" data-aos="zoom-in" data-aos-duration="2000" style="background-image: url(images/galeri4.jpg)"></div>
-  <div class="item" data-aos="zoom-in" data-aos-duration="2000" style="background-image: url(images/galeri3.jpg)"></div>
-  <div class="item" data-aos="zoom-in" data-aos-duration="2000" style="background-image: url(images/galeri5.jpg)"></div>
+  <div class="item" data-aos="zoom-in" data-aos-duration="2000" style="background-image: url(images/galeri2.jpeg)"></div>
+  <div class="item" data-aos="zoom-in" data-aos-duration="2000" style="background-image: url(images/galeri4.jpeg)"></div>
+  <div class="item" data-aos="zoom-in" data-aos-duration="2000" style="background-image: url(images/galeri3.jpeg)"></div>
+  
   
   
   <!-- <div class="item" style="background-image: url(images/galeri4.jpg)"></div> -->
@@ -783,18 +797,51 @@ Budi Saputra
 </div>
 </section>
 
+
 <section class="rsvp-section section-padding" id="rsvp">
+<div class="container" data-aos="fade-up" data-aos-duration="2000">
 <div class="row">
-<div class="col d-flex justify-content-center p-2 mx-4" data-aos="fade-up" data-aos-duration="2000">
-<div class="text-center mt-3">
-<p><span style="text-align: center; color: black;" class="font-responsif">Terimakasih atas kebaikan dan doa untuk kami. <br> Kehadiran keluarga, sahabat serta rekan akan menjadi bagian momen berharga penyatuan cinta kasih kami.</span><br><br>
-<span style="text-align: center; color: black;" class="font-responsif">Salam hormat,</span>
-<h2 class="wow fadeIn heading-font-couple mx-5" style="color:#BB9EAB;" data-wow-delay="0.2s">Fitri &amp; Budi</h2>
-</p>
+<div class="col col-xs-12">
+<div class="section-title">
+<h2 class="heading-font-type">Ucapan & Do'a</h2>
+</div>
+<div style="height: 200px; overflow:scroll; overflow-x:hidden;" >
+
+    <?php foreach ($dataBT as $data) :?>
+    <div class="row" >
+      <div class="col-sm-12 col-md-12">
+        <div>
+          <div class="d-flex justify-content-center row mb-2">
+            <div class="col-md-8">
+              <div class="d-flex flex-column comment-section">
+                <div class="bg-white p-2 shadow-sm">
+                  <div class="d-flex flex-row ml-2">
+                    <div class="d-flex flex-column justify-content-start">
+                      <span class="d-block font-weight-bold" style="color: #BB9EAB"><?= $data['nama_tamu'] ?></span>
+                    </div>
+                  </div>
+                  <div class="mt-2 ml-2">
+                    <p class="comment-text"><?= $data['pesan_tamu'] ?></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <?php endforeach; ?>
+</div>
+<div class="text-center pt-3">
+<button type="button" class="theme-btn" data-toggle="modal" data-target="#wishModal">
+Kirim Ucapan & Do'a
+</button>
 </div>
 </div>
 </div>
+</div> 
 </section>
+
 
 <!-- <div id="overlay" onclick="off()">
   <img src="images/undangan.jpeg" width="80%" alt="">
@@ -1014,7 +1061,7 @@ function off() {
             let soundID;
             let elem = $('#playButton')
             var sound = new Howl({
-                src: ['./song/backsong2.mp3'],
+                src: ['./song/backsong1.mp3'],
                 autoplay: autoplay,
                 loop: true,
                 onplay: isPlaying
@@ -1095,7 +1142,7 @@ function off() {
             mobile: !0,
             live: !0
         });
-        s("#clock").length && s("#clock").countdown("2021/12/12 09:00:00", function (e) {
+        s("#clock").length && s("#clock").countdown("2022/01/09 08:00:00", function (e) {
             s(this).html(e.strftime('<div class="box"><div>%D</div> <span>Hari</span> </div><div class="box"><div>%H</div> <span>Jam</span> </div><div class="box"><div>%M</div> <span>Menit</span> </div><div class="box"><div>%S</div> <span>Detik</span> </div>'))
         }), s(window).on("load", function () {
             s(".preloader").length && s(".preloader").delay(100).fadeOut(500, function () {
