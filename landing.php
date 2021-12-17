@@ -116,7 +116,7 @@ if (isset($_GET['untuk']))
 
 					<div class="contact-form margin-bottom">
 
-						<h1 class="center-text" style="margin-bottom:20px;">Dzulqa <br> <i style="color:#E45F74;" class="icon icon-heart"></i> <br> Andi</h1>
+						<h2 class="center-text" style="margin-bottom:20px;">Dzulqa <br> <i style="color:#E45F74;" class="icon icon-heart"></i> <br> Andi</h2>
 						<?php if (isset($_GET['untuk']) && $_GET['untuk'] != '') {?>
 						<p class="center-text">
 							Turut mengundang Bapak/Ibu/Saudara/i

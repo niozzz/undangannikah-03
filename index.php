@@ -66,6 +66,10 @@ session_unset();
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
 <link href="assets/font-icon.css" rel="stylesheet">
 <!-- <link href="assets/font-icon.css" rel="stylesheet"> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap" rel="stylesheet">
+
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -540,8 +544,8 @@ Budiman Haryanto, S.Pd
     
 <div class="col d-flex justify-content-center p-2" data-aos="fade-up" data-aos-duration="2000">
     
-<div class="text-center font-italic mt-3">
-<h4 style="text-align: right; margin-bottom:10px;">وَمِنْ ءَايَٰتِهِۦٓ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَٰجًا لِّتَسْكُنُوٓا۟ إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِى ذَٰلِكَ لَءَايَٰتٍ لِّقَوْمٍ يَتَفَكَّرُونَ</h4>
+<div class="text-center mt-3">
+<h4 style="text-align: right; margin-bottom:10px; font-family: 'Scheherazade New', serif; line-height:2;">وَمِنْ ءَايَٰتِهِۦٓ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَٰجًا لِّتَسْكُنُوٓا۟ إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِى ذَٰلِكَ لَءَايَٰتٍ لِّقَوْمٍ يَتَفَكَّرُونَ</h4>
 
 						<span style="text-align: left; margin-bottom:10px; font-weight:bold; text-align:justify;">Wa min āyātihī an khalaqa lakum min anfusikum azwājal litaskunū ilaihā wa ja'ala bainakum mawaddataw wa raḥmah, inna fī żālika la`āyātil liqaumiy yatafakkarụn</span> <br>
 
@@ -739,12 +743,13 @@ Budiman Haryanto, S.Pd
 <div class="row">
 <div class="col-lg-12 col-md-12">
 <div class="google-maps" id="google-maps" data-aos="zoom-in" data-aos-duration="2000">
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1983.0999233012203!2d106.6246204!3d-6.2373693!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fc093dd1cdb7%3A0xab6fba4193eea1ef!2sJl.%20Bidar%20II%20No.11%2C%20Klp.%20Dua%2C%20Kec.%20Klp.%20Dua%2C%20Tangerang%2C%20Banten%2015810!5e0!3m2!1sid!2sid!4v1638036129675!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.638920400281!2d108.43414261477425!3d-7.16767289482478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f69dc62d79b87%3A0x67676f7556746232!2sMasjid%20Jami%20Nurul%20Amal!5e0!3m2!1sid!2sid!4v1639732243365!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
 </div>
 <div class="form-group">
 <br>
-<a href="https://goo.gl/maps/jUyLoGtaDqtQ3QkY8" target="_blank" class="theme-btn mr-2 mb-2">Arahkan ke Lokasi</a>
+<a href="https://goo.gl/maps/5DnMHEYVffuauipG9" target="_blank" class="theme-btn mr-2 mb-2">Arahkan ke Lokasi</a>
 </div>
 </div>
 </div>
@@ -794,6 +799,26 @@ Budiman Haryanto, S.Pd
   
 </div>
 
+</div>
+</section>
+
+<section class="rsvp-section section-padding flower">
+<div class="container">
+<div class="section-title" data-aos="fade-up" data-aos-duration="2000">
+<h2 class="heading-font-type">Kutipan Do'a</h2>
+</div>
+<div class="row">
+    
+<div class="col d-flex justify-content-center p-2" data-aos="fade-up" data-aos-duration="2000">
+    
+<div class="text-center mt-3">
+
+<p><span style="text-align: center; color: black;" class="font-responsif">Semoga Alloh SWT. Menghimpun yang terserak dari keduanya, Memberkati mereka berdua, Meningkatkan kualitas keturunan mereka, Menjadikannya pembuka pintu-pintu Rahmat, Sumber ilmu dan hikmah, Serta pemberi rasa aman bagi umat.</p>
+
+            <span style="text-align: center;">(Do'a Nabi Muhammad SAW. Pada pernikahan putri beliau Fatimah Az-Zahra dengan Ali bin Abi Thalib)</span>
+</div>
+</div>
+</div>
 </div>
 </section>
 
