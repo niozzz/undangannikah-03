@@ -73,8 +73,8 @@ session_unset();
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-<link href="https://inveet.id/themes/pastel_floral/css/jquery.fancybox.css" rel="stylesheet">
-<link href="https://inveet.id/themes/pastel_floral/css/style.css?v=1633771405" rel="stylesheet">
+<link href="assets/jquery.fancybox.css" rel="stylesheet">
+<link href="assets/style.css?v=1633771405" rel="stylesheet">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -312,6 +312,10 @@ session_unset();
 
 @media only screen and (max-width: 600px) {
   /* phone */
+
+  .ukuran-heading1{
+    font-size: 3.5rem !important;
+  }
 
   .font-responsif{
     font-size: 18px;
@@ -675,7 +679,7 @@ Budiman Haryanto, S.Pd
 <div class="card-body">
 <h4 class="heading-font-type pb-2"></h4>
 <div data-aos="zoom-in" data-aos-duration="2000">
-  <img src="https://inveet.id/inveet/img/date.png" alt="Resepsi Date" height="40" width="40">
+  <img src="images/date.png" alt="Resepsi Date" height="40" width="40">
   <p class="font-location mt-2">
   <h5>
   <strong>
@@ -751,6 +755,29 @@ Budiman Haryanto, S.Pd
 <br>
 <a href="https://goo.gl/maps/5DnMHEYVffuauipG9" target="_blank" class="theme-btn mr-2 mb-2">Arahkan ke Lokasi</a>
 </div>
+
+<div class="col-md-12 sketchy" data-aos="zoom-in" data-aos-duration="2000">
+    <p></p>
+    <img src="images/quran.png" alt="Resepsi Date" height="40" width="40">
+    <p class="font-location mt-2">
+    <h5>
+    <strong>
+    Tasyakuran Mempelai Pria <br>
+    
+    </strong>
+    </h5>
+    Kamis - Jum'at, 6-7 Januari 2022
+    <br><br>
+    <h5>
+    <strong>
+    Alamat Mempelai Pria
+    </strong>
+    </h5>
+    Jl. Lingkar Selatan No. 27 Desa Karangnangka Rt 01/04 Kec. Kedungbanteng, Banyumas, Jawa Tengah
+
+    </p>
+  </div>
+
 </div>
 </div>
 </div>
@@ -771,7 +798,7 @@ Budiman Haryanto, S.Pd
 <div class="row">
 <div class="col col-xs-12">
 <div class="section-title">
-<h2 class="heading-font-type">Tanda Kasih</h2>
+<h2 class="heading-font-type ukuran-heading1" >Kado</h2>
 </div>
 <div class="text-center">
 <a href="#" class="theme-btn" data-toggle="modal" data-target="#amplopModal">Kirim di sini</a>
@@ -905,7 +932,7 @@ Buat undangan seperti ini
 </a>
 </nav>
 <div class="modal fade" id="amplopModal" tabindex="-1" role="dialog" aria-labelledby="amplopModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content col-12">
       <div class="modal-header">
         <h4 class="modal-title font-modal">Kirim Tanda Kasih</h4>
@@ -914,27 +941,52 @@ Buat undangan seperti ini
         </button>
       </div>
       <div class="modal-body">
-        <div class="col">
-        <div class="form-group">
-            <!-- <label for="namaBank">Nama Bank</label> -->
-            <div class="text-center">
+        <div class="row">
 
-              <img src="./images/qr-code.jpeg"  alt="" name="namaBank">
-            </div>
-          </div>
-          
+          <div class="col-md-6">
           <div class="form-group">
-            <label for="no_pengirim">Nomor Rekening</label>
-            <input type="text" class="form-control" name="no_pengirim" readonly id="inputRekFitri" value="7104431628">
+              <!-- <label for="namaBank">Nama Bank</label> -->
+              <div class="text-center">
+  
+                <img src="./images/qr1.jpg"  alt="" name="namaBank">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="no_pengirim">Nomor Rekening</label>
+              <input type="text" class="form-control" name="no_pengirim" readonly id="inputQR1" value="7121810257">
+            </div>
+            
+  
+            <div class="row">
+  <div class="col-md-12">
+  <button id="copyRekening1" class="btn btn-block" style="color:white; background-color:#bb9eab; border-color:#bb9eab;">Salin Nomor Rekening</button>
+  </div>
+  </div>
+  <hr>
           </div>
-          
-
-          <div class="row">
-<div class="col-md-12">
-<button id="copyRekFitri" class="btn btn-block" style="color:white; background-color:#bb9eab; border-color:#bb9eab;">Salin Nomor Rekening</button>
-</div>
-</div>
-<hr>
+          <div class="col-md-6">
+          <div class="form-group">
+              <!-- <label for="namaBank">Nama Bank</label> -->
+              <div class="text-center">
+  
+                <img src="./images/qr2.jpg"  alt="" name="namaBank">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="no_pengirim">Nomor Rekening</label>
+              <input type="text" class="form-control" name="no_pengirim" readonly id="inputQR2" value="7615348708">
+            </div>
+            
+  
+            <div class="row">
+  <div class="col-md-12">
+  <button id="copyRekening2" class="btn btn-block" style="color:white; background-color:#bb9eab; border-color:#bb9eab;">Salin Nomor Rekening</button>
+  </div>
+  </div>
+  <hr>
+          </div>
         </div>
       </div>
     </div>
@@ -991,9 +1043,9 @@ Ucapan & Do'a
 
 
 
-<script src="https://inveet.id/themes/pastel_floral/js/jquery.min.js"></script>
+<script src="assets/pastel-floral/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
-<script src="https://inveet.id/themes/pastel_floral/js/jquery-plugin-collection.js"></script>
+<script src="assets/pastel-floral/jquery-plugin-collection.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
@@ -1003,7 +1055,7 @@ Ucapan & Do'a
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.1/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-HXxN3IYkrTWLlY1asbRx+fgPfTOpVSyg1UpqxFXg9hQUFdBl9/AdESqpaPzZX0HrcKsXA38hl9rOZm+qP/XKtg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.1/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-MdrToLyMzGkhQjKuuZbdttp7SWIiRFDRGEmAY8U0T3Y7z+HJ5JxQ+6Ei9xy9cJKHDdbhZQwHPEek3AUMsmzfWg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js" integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://inveet.id/inveet/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+<script src="assets/bootstrap-notify.min.js"></script>
 <!-- <script src='assets/sakura.js'></script> -->
 
 <script>
@@ -1186,10 +1238,17 @@ function off() {
 </script>
 
 <script>
-    document.getElementById('copyRekFitri').addEventListener('click', copyRekFitri);
-            function copyRekFitri() {
-                var copyText = document.getElementById("inputRekFitri");
-                document.querySelector("#inputRekFitri").select();
+    document.getElementById('copyRekening1').addEventListener('click', copyRekening1);
+            function copyRekening1() {
+                var copyText = document.getElementById("inputQR1");
+                document.querySelector("#inputQR1").select();
+                document.execCommand("copy");
+                alert("Teks berhasil dicopy : " + copyText.value);
+            }
+    document.getElementById('copyRekening2').addEventListener('click', copyRekening2);
+            function copyRekening2() {
+                var copyText = document.getElementById("inputQR2");
+                document.querySelector("#inputQR2").select();
                 document.execCommand("copy");
                 alert("Teks berhasil dicopy : " + copyText.value);
             }

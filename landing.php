@@ -55,11 +55,11 @@ if (isset($_GET['untuk']))
 
 	<b:if cond='data:view.isHomepage'>
 
-	<meta name="description" content="Undangan Pernikahan Dzulqa &amp; Andi">
-	<meta property="og:title" content="Undangan Pernikahan Dzulqa &amp; Andi" />
+	<meta name="description" content="Undangan Pernikahan Fitri &amp; Budi">
+	<meta property="og:title" content="Undangan Pernikahan Fitri &amp; Budi" />
 	<link rel="shortcut icon" href="https://inveet.id/landing/favicon.ico">
 	<meta property="og:url" content="https://u-nik.my.id" />
-	<meta property="og:description" content="Undangan Pernikahan Dzulqa &amp; Andi">
+	<meta property="og:description" content="Undangan Pernikahan Fitri &amp; Budi">
 	<meta property="og:image" content="https://undangannikahcitra.000webhostapp.com/assets/images/slider1.jpg">
 
     </b:if>
@@ -116,7 +116,7 @@ if (isset($_GET['untuk']))
 
 					<div class="contact-form margin-bottom">
 
-						<h2 class="center-text" style="margin-bottom:20px;">Dzulqa <br> <i style="color:#E45F74;" class="icon icon-heart"></i> <br> Andi</h2>
+						<h2 class="center-text" style="margin-bottom:20px;">Fitri <br> <i style="color:#E45F74;" class="icon icon-heart"></i> <br> Budi</h2>
 						<?php if (isset($_GET['untuk']) && $_GET['untuk'] != '') {?>
 						<p class="center-text">
 							Turut mengundang Bapak/Ibu/Saudara/i
